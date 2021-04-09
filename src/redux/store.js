@@ -1,4 +1,5 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
 // data member
 const initState = {
@@ -44,5 +45,5 @@ function myreducer(state = initState, action) {
   }
 }
 
-const store = createStore(myreducer);
+const store = createStore(myreducer, applyMiddleware(thunk));
 export default store;
