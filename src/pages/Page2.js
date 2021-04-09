@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import { apiCallAddtoCart } from "../redux/action";
 
 export default function Page2() {
   const counter = useSelector((state) => state.counter);
@@ -10,11 +11,14 @@ export default function Page2() {
     dispatch({ type: "INC_COUNTER" });
   };
 
+  const addToCartV1 = (product) => {
+    // update the ui
+    dispatch({ type: "ADD_TO_CART", payload: product });
+  };
+
   const addToCart = (product) => {
-    dispatch({
-      type: "ADD_TO_CART",
-      payload: product,
-    });
+    console.log(product);
+    dispatch(apiCallAddtoCart(product));
   };
 
   return (
@@ -22,6 +26,7 @@ export default function Page2() {
       <div className="row">
         {products.map((product, index) => (
           <div
+            key={index}
             className="col-4 border border-primary d-flex justify-content-center align-items-center"
             style={{ height: "150px" }}
           >
