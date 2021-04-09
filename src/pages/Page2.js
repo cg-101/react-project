@@ -8,10 +8,16 @@ export default function Page2() {
     dispatch({ type: "INC_COUNTER" });
   };
 
+  const addToCart = () => {
+    dispatch({ type: "ADD_TO_CART" });
+  };
+
   return (
     <div className="bg-info" style={{ height: "100vh" }}>
       PAGE2 {counter}
       <button onClick={updateCounter}>Udpate Counter</button>
+      <br />
+      <button onClick={addToCart}>Add to Cart</button>
     </div>
   );
 }

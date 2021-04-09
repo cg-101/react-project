@@ -21,11 +21,11 @@ function App() {
       </Link>
 
       <Link to="/p2">
-        <button className="btn btn-primary">Explore</button>
+        <button className="btn btn-primary">Product Explore</button>
       </Link>
 
       <Link to="/p3">
-        <button className="btn btn-primary">Notifications</button>
+        <button className="btn btn-primary">Display Cart</button>
       </Link>
 
       <Switch>

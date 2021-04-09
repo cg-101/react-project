@@ -3,7 +3,7 @@ import { createStore } from "redux";
 // data member
 const initState = {
   counter: 100,
-  cart: [],
+  cart: [{ productTitle: "Product1", price: 100, qty: 1 }],
   profile: { username: "react" },
 };
 
@@ -24,7 +24,18 @@ function myreducer(state = initState, action) {
       return { ...state, profile: action.payload };
 
     case "ADD_TO_CART":
-      return { ...state, cart: [...state.cart, action.payload] };
+      // return { ...state, cart: [...state.cart, action.payload] };
+      return {
+        ...state,
+        cart: [
+          ...state.cart,
+          {
+            productTitle: "Product2",
+            qty: 2,
+            price: 200,
+          },
+        ],
+      };
 
     default:
       return state;
