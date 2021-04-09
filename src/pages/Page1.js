@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 
 export default function Page1() {
   let history = useHistory();
+  const counter = useSelector((state) => state.counter);
 
   const goToPage3 = () => {
     // logic
@@ -14,7 +16,7 @@ export default function Page1() {
 
   return (
     <div className="bg-primary" style={{ height: "100vh" }}>
-      PAGE1
+      PAGE1 {counter}
       {/**Option` */}
       <div></div>
       <Link to="/p2">
