@@ -1,5 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { apiCallAddtoCart } from "../redux/action";
+import {
+  apiCallAddtoCart,
+  apiCallUpdateUserProfile,
+} from "../redux/action";
 
 export default function Page2() {
   const counter = useSelector((state) => state.counter);
@@ -21,8 +24,22 @@ export default function Page2() {
     dispatch(apiCallAddtoCart(product));
   };
 
+  const udpateProfile = (user) => {
+    dispatch(apiCallUpdateUserProfile(user));
+  };
+
   return (
     <div className="container-fluid">
+      <div className="row">
+        <button
+          className="btn btn-sm btn-primary"
+          onClick={() =>
+            udpateProfile({ id: 1, username: "new username" })
+          }
+        >
+          Update Profile
+        </button>
+      </div>
       <div className="row">
         {products.map((product, index) => (
           <div
