@@ -27,14 +27,7 @@ function myreducer(state = initState, action) {
       // return { ...state, cart: [...state.cart, action.payload] };
       return {
         ...state,
-        cart: [
-          ...state.cart,
-          {
-            productTitle: "Product2",
-            qty: 2,
-            price: 200,
-          },
-        ],
+        cart: [...state.cart, action.payload],
       };
 
     default:

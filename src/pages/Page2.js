@@ -9,7 +9,10 @@ export default function Page2() {
   };
 
   const addToCart = () => {
-    dispatch({ type: "ADD_TO_CART" });
+    dispatch({
+      type: "ADD_TO_CART",
+      payload: { productTitle: "Product 3", price: 300, qty: 3 },
+    });
   };
 
   return (
