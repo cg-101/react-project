@@ -1,6 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
+import Page3 from "./pages/Page3";
 
 // SPA :: SINGLE PAGE APPLICATION
 function App() {
@@ -12,30 +15,6 @@ function App() {
       <Route path="/p3" component={Page3} />
       <Route path="/" component={Page1} />
     </Router>
-  );
-}
-
-function Page1() {
-  return (
-    <div className="bg-primary" style={{ height: "100vh" }}>
-      PAGE1
-    </div>
-  );
-}
-
-function Page2() {
-  return (
-    <div className="bg-info" style={{ height: "100vh" }}>
-      PAGE2
-    </div>
-  );
-}
-
-function Page3() {
-  return (
-    <div className="bg-warning" style={{ height: "100vh" }}>
-      PAGE3
-    </div>
   );
 }
 
