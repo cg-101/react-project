@@ -2,63 +2,38 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Page2() {
   const counter = useSelector((state) => state.counter);
+  const products = useSelector((state) => state.products);
+
   const dispatch = useDispatch();
 
   const updateCounter = () => {
     dispatch({ type: "INC_COUNTER" });
   };
 
-  const addToCart = () => {
+  const addToCart = (product) => {
     dispatch({
       type: "ADD_TO_CART",
-      payload: { productTitle: "Product 3", price: 300, qty: 3 },
+      payload: product,
     });
   };
 
   return (
     <div className="container-fluid">
       <div className="row">
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
-
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
-
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
-
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
-
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
-
-        <div
-          className="col-4 border border-primary d-flex justify-content-center align-items-center"
-          style={{ height: "150px" }}
-        >
-          <button className="btn btn-primary">Add to Cart</button>
-        </div>
+        {products.map((product, index) => (
+          <div
+            className="col-4 border border-primary d-flex justify-content-center align-items-center"
+            style={{ height: "150px" }}
+          >
+            {product.productTitle}
+            <button
+              className="btn btn-sm btn-primary"
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );

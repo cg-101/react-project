@@ -3,6 +3,15 @@ import { createStore } from "redux";
 // data member
 const initState = {
   counter: 100,
+  products: [
+    { productTitle: "Product1", price: 100, qty: 1 },
+    { productTitle: "Product2", price: 200, qty: 1 },
+    { productTitle: "Product3", price: 300, qty: 1 },
+    { productTitle: "Product4", price: 400, qty: 1 },
+    { productTitle: "Product5", price: 100, qty: 1 },
+    { productTitle: "Product6", price: 200, qty: 1 },
+    { productTitle: "Product7", price: 300, qty: 1 },
+  ],
   cart: [{ productTitle: "Product1", price: 100, qty: 1 }],
   profile: { username: "My.Xyz" },
 };
