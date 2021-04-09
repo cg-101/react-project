@@ -16,11 +16,50 @@ export default function Page2() {
   };
 
   return (
-    <div className="bg-info" style={{ height: "100vh" }}>
-      PAGE2 {counter}
-      <button onClick={updateCounter}>Udpate Counter</button>
-      <br />
-      <button onClick={addToCart}>Add to Cart</button>
+    <div className="container-fluid">
+      <div className="row">
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+
+        <div
+          className="col-4 border border-primary d-flex justify-content-center align-items-center"
+          style={{ height: "150px" }}
+        >
+          <button className="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
     </div>
   );
 }
