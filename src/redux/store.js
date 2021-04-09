@@ -4,7 +4,7 @@ import { createStore } from "redux";
 const initState = {
   counter: 100,
   cart: [{ productTitle: "Product1", price: 100, qty: 1 }],
-  profile: { username: "react" },
+  profile: { username: "My.Xyz" },
 };
 
 // function :: logical
