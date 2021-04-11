@@ -42,18 +42,19 @@ export default function Page2() {
       </div>
       <div className="row">
         {products.map((product, index) => (
-          <div
-            key={index}
-            className="col-4 border border-primary d-flex justify-content-center align-items-center"
-            style={{ height: "150px" }}
-          >
-            {product.productTitle}
-            <button
-              className="btn btn-sm btn-primary"
-              onClick={() => addToCart(product)}
+          <div key={index} className="col-4 px-1 ">
+            <div
+              className="border d-flex justify-content-center align-items-center my-1"
+              style={{ height: "150px" }}
             >
-              Add to Cart
-            </button>
+              {product.productTitle}
+              <button
+                className="btn btn-sm btn-primary"
+                onClick={() => addToCart(product)}
+              >
+                Add to Cart
+              </button>
+            </div>
           </div>
         ))}
       </div>
