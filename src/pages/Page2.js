@@ -39,6 +39,9 @@ export default function Page2() {
         >
           Update Profile
         </button>
+        <button className="bg-primary text-light">A</button>
+        <button className="bg-primary text-light"> A</button>
+        <button className="bg-primary text-light">A</button>
       </div>
       <div className="row">
         {products.map((product, index) => (
